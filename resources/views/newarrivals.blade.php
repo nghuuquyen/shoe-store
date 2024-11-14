@@ -149,176 +149,24 @@
             </div>
         </div>
         <div id="productContainer" class="w-full h-full mb-20 max-[431px]:m-0 max-[431px]:ml-3 grid grid-cols-4 gap-3 max-[431px]:grid-cols-1">
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <a href="./details.html">
-                        <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9.jpg" alt=""
-                             class="w-full h-auto object-cover">
-                        <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9 (4).jpg" alt=""
-                             class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                    </a>
+            @foreach($products as $product)
+                <div class="w-full h-auto flex-col max-[431px]:p-4">
+                    <div class="relative w-full h-auto">
+                        <a href="./details.html">
+                            <img src="{{ $product->main_image_url }}" alt=""
+                                 class="w-full h-auto object-cover">
+                            <img src="{{ $product->main_image_url }}" alt=""
+                                 class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        </a>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold mt-2">{{ $product->name }}</span>
+                        <span class="text-gray-500">{{ $product->category->name }}</span>
+                        <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
+                        <span class="font-semibold text-lg mt-3">{{ $product->price }}</span>
+                    </div>
                 </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T.jpg" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-g-nrg-golf-shoes-bf4r0T (1).jpg" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-older-shoes-xLzJc6.png" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-older-shoes-xLzJc6 (4).png" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-WSkjPL.png" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-WSkjPL (3).png" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-xmgzfl.jpg" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-se-shoes-xmgzfl (1).png" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T.jpg" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-459b4T (7).png" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-lFCSjp.jpg" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-lFCSjp (1).png" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9.jpg" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-nGLZR9 (4).jpg" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-zTWr01.png" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-1-low-shoes-zTWr01 (2).png" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-9-g-golf-shoes-nNqtwL.png" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-9-g-golf-shoes-nNqtwL (4).png" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-jordan-i-high-g-golf-shoes-qKzTBg (1).png" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-jordan-i-high-g-golf-shoes-qKzTBg (1).jpg" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
-            <div class="w-full h-auto flex-col max-[431px]:p-4">
-                <div class="relative w-full h-auto">
-                    <img src="./asset/img/product/Shoes/air-max-270-shoes-2V5C4p.png" alt=""
-                         class="w-full h-auto object-cover">
-                    <img src="./asset/img/product/Shoes/air-max-270-shoes-2V5C4p (3).png" alt=""
-                         class="w-full h-auto object-cover absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold mt-2">Air Jordan 1 Low</span>
-                    <span class="text-gray-500">Men's / Women's Shoes</span>
-                    <a href="./details.html"><span class="underline text-gray-500">More color</span></a>
-                    <span class="font-semibold text-lg mt-3">$59.99</span>
-                </div>
-            </div>
+            @endforeach
         </div>
 
     </section>
