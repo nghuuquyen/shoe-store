@@ -22,17 +22,20 @@
             <button><i class='bx bx-filter text-2xl'></i></button>
             <strong id="filterText" class="text-sm">SHOW FILTERS</strong>
         </div>
-        <div class="h-full flex items-center space-x-2">
-            <input id="searchInput" type="text" placeholder="Search..." class="w-[450px] border rounded p-3 text-sm max-[431px]:hidden">
-            <button id="searchButton"><i
-                    class='bx bx-search p-3 rounded-full text-white text-center bg-black'></i></button>
-        </div>
-        <select name="" id="" class="h-full flex items-center font-bold">
-            <option value="revevance">SORT BY</option>
-            <option value="lowestprice">LOWEST PRICE</option>
-            <option value="highestprice">HIGHEST PRICE</option>
-            <option value="newestfirst">NEWEST FIRST</option>
-        </select>
+        <form method="GET" action="{{ route('newarrivals.index') }}">
+            <div class="h-full flex items-center space-x-2">
+                <input id="searchInput" name="search" type="text" placeholder="Search..." class="w-[450px] border rounded p-3 text-sm max-[431px]:hidden">
+                <button id="searchButton" type="submit"><i
+                        class='bx bx-search p-3 rounded-full text-white text-center bg-black'></i></button>
+            </div>
+
+            <select id="" name="sort" class="h-full flex items-center font-bold">
+                <option value="revevance">SORT BY</option>
+                <option value="lowestprice">LOWEST PRICE</option>
+                <option value="highestprice">HIGHEST PRICE</option>
+                <option value="newestfirst">NEWEST FIRST</option>
+            </select>
+        </form>
     </div>
     <section class="col h-full m-auto mb-10 mt-4 flex max-[431px]:m-0">
         <div id="filterPanel" class="w-60 h-full max-[431px]:hidden hidden pr-4">

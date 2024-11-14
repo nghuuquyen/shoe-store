@@ -7,4 +7,4 @@ Route::get('/', function () {
     return view('homepage');
 });
 
-Route::get('/newarrivals', [NewArrivalsController::class, 'index']);
+Route::get('/newarrivals', [NewArrivalsController::class, 'index'])->name('newarrivals.index');
