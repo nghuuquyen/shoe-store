@@ -1,9 +1,4 @@
-<!-- resources/views/homepage.blade.php -->
-@extends('layout')
-
-@section('title', 'Homepage')
-
-@section('content')
+<x-layout>
     <!-- PRODUC LIMITED -->
     <section class="w-full flex flex-col items-center h-[40rem] mt-14">
         <span class="font-bold text-3xl">LIMITED IN STOCK</span>
@@ -361,4 +356,4 @@
         document.getElementById('quantity').addEventListener('input', updateTotal);
         document.getElementById('deleteProductBtn').addEventListener('click', deleteProduct);
     </script>
-@endsection
+</x-layout>
