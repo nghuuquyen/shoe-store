@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendContactEmail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
 
@@ -20,7 +21,9 @@ class ContactController extends Controller
             'message' => 'required|string',
         ]);
 
-        Contact::create($validated);
+        $contact = Contact::create($validated);
+
+        SendContactEmail::dispatch($contact);
 
         return back()->with('success', 'Contact submitted successfully!');
     }
