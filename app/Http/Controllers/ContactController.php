@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\ContactCreated;
 use App\Jobs\SendContactEmail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Event;
 
 class ContactController extends Controller
 {
@@ -23,7 +25,11 @@ class ContactController extends Controller
 
         $contact = Contact::create($validated);
 
+        // Dispatch a job to send email
         SendContactEmail::dispatch($contact);
+
+        // Fire real-time event
+        Event::dispatch(new ContactCreated($contact));
 
         return back()->with('success', 'Contact submitted successfully!');
     }
