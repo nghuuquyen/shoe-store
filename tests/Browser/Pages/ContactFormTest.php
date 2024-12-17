@@ -2,12 +2,15 @@
 
 namespace Tests\Browser\Pages;
 
+use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Laravel\Dusk\Browser;
 use Tests\DuskTestCase;
 use Throwable;
 
 class ContactFormTest extends DuskTestCase
 {
+    use DatabaseMigrations;
+
     /**
      * Test the contact form submission with valid data.
      *
@@ -16,9 +19,6 @@ class ContactFormTest extends DuskTestCase
      */
     public function test_contact_form_submission()
     {
-        // Run migrations
-        $this->artisan('migrate');
-
         $this->browse(function (Browser $browser) {
             $browser->visit('/contact') // Visit the contact page
             ->assertSee('Contact') // Verify the page has the word 'Contact'

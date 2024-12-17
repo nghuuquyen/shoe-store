@@ -30,11 +30,7 @@ class ContactTest extends TestCase
         $response = $this->post(route('contact.submit'), $data);
 
         // Assert the contact was stored in the database
-        $this->assertDatabaseHas('contacts', [
-            'name' => 'John Doe',
-            'email' => 'johndoe@example.com',
-            'message' => 'This is a test message.',
-        ]);
+        $this->assertDatabaseHas('contacts', $data);
 
         // Assert the response redirects back with a success message
         $response->assertRedirect()
